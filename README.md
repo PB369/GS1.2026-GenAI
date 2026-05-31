@@ -2,10 +2,33 @@
 
 > Pipeline completo de Machine Learning para predição e classificação de risco de desmatamento e queimadas com dados sintéticos de sensoriamento remoto.
 
-[![Python](https://img.shields.io/badge/Python-3.10+-blue?logo=python)](https://python.org)
-[![XGBoost](https://img.shields.io/badge/XGBoost-2.0-orange)](https://xgboost.ai)
-[![Streamlit](https://img.shields.io/badge/Deploy-Streamlit-red)](https://streamlit.io)
-[![SHAP](https://img.shields.io/badge/Interpretability-SHAP-green)](https://shap.readthedocs.io)
+---
+
+## 📌 Contexto do Problema
+
+O desmatamento e as queimadas na Amazônia e no Cerrado representam uma das maiores crises ambientais da atualidade. Satélites como Landsat, Sentinel-2 e MODIS fornecem dados multiespectrais em tempo quase real, possibilitando monitoramento contínuo da cobertura vegetal.
+
+Este projeto simula um **sistema de alerta precoce** de incêndios florestais, que classifica pontos geográficos em três níveis de risco — **Baixo, Médio e Alto** — com base em variáveis derivadas de imagens de satélite e dados climáticos gerados pelo monitoramento do desmatamento.
+
+---
+
+## 📦 Fonte dos Dados
+
+Dataset **sintético** gerado com `data/generate_dataset.py` — **2.000 registros × 19 colunas**.
+
+| Variável | Descrição |
+|---|---|
+| `temp_superficie` | Temperatura superficial em °C (LST) |
+| `ndvi` | Normalized Difference Vegetation Index |
+| `ndwi` | Normalized Difference Water Index |
+| `umidade_relativa` | Umidade relativa do ar (%) |
+| `precipitacao_30d` | Precipitação acumulada em 30 dias (mm) |
+| `frp_fogo` | Fire Radiative Power — intensidade de fogo (MW) |
+| `dist_estrada_km` | Distância à estrada mais próxima (km) |
+| `dist_area_protegida_km` | Distância à unidade de conservação (km) |
+| `dias_sem_chuva` | Dias consecutivos sem chuva |
+| ... | + 10 variáveis adicionais de localização e clima |
+| `risco_desmatamento` | **TARGET** — Baixo / Médio / Alto |
 
 ---
 
@@ -45,34 +68,6 @@ sentinel-ai/
 ├── requirements.txt
 └── README.md
 ```
-
----
-
-## 📌 Contexto do Problema
-
-O desmatamento e as queimadas na Amazônia e no Cerrado representam uma das maiores crises ambientais da atualidade. Satélites como Landsat, Sentinel-2 e MODIS fornecem dados multiespectrais em tempo quase real, possibilitando monitoramento contínuo da cobertura vegetal.
-
-Este projeto simula um **sistema de alerta precoce** de incêndios florestais, que classifica pontos geográficos em três níveis de risco — **Baixo, Médio e Alto** — com base em variáveis derivadas de imagens de satélite e dados climáticos gerados pelo monitoramento do desmatamento.
-
----
-
-## 📦 Fonte dos Dados
-
-Dataset **sintético** gerado com `data/generate_dataset.py` — **2.000 registros × 19 colunas**.
-
-| Variável | Descrição |
-|---|---|
-| `temp_superficie` | Temperatura superficial em °C (LST) |
-| `ndvi` | Normalized Difference Vegetation Index |
-| `ndwi` | Normalized Difference Water Index |
-| `umidade_relativa` | Umidade relativa do ar (%) |
-| `precipitacao_30d` | Precipitação acumulada em 30 dias (mm) |
-| `frp_fogo` | Fire Radiative Power — intensidade de fogo (MW) |
-| `dist_estrada_km` | Distância à estrada mais próxima (km) |
-| `dist_area_protegida_km` | Distância à unidade de conservação (km) |
-| `dias_sem_chuva` | Dias consecutivos sem chuva |
-| ... | + 10 variáveis adicionais de localização e clima |
-| `risco_desmatamento` | **TARGET** — Baixo / Médio / Alto |
 
 ---
 
