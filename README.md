@@ -130,6 +130,7 @@ app/main.py                    → Deploy Streamlit (4 páginas)
 
 Clique neste link para visualizar o deploy da solução:
 
+(https://sentinel-ai-project-00.streamlit.app/)[https://sentinel-ai-project-00.streamlit.app/]
 
 ---
 
