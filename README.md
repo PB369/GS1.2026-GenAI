@@ -4,6 +4,12 @@
 
 ---
 
+## 💎 Integrantes do Grupo
+
+* Arthur Petrin – RM98735
+* Pedro Henrique Fernandes Lô de Barros – RM97937
+* Vinicius Oliveira de Barros – RM97824
+
 ## 📌 Contexto do Problema
 
 O desmatamento e as queimadas na Amazônia e no Cerrado representam uma das maiores crises ambientais da atualidade. Satélites como Landsat, Sentinel-2 e MODIS fornecem dados multiespectrais em tempo quase real, possibilitando monitoramento contínuo da cobertura vegetal.
